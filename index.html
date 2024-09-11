@@ -9,44 +9,59 @@
     <title>Form</title>
 </head>
 <body>
-    <header>
-        <h1>Form</h1>
+    <header class="mt-3">
+        <h1 class="text-center">Form</h1>
     </header>
     <main>
-        <form>
-            <ol>
-                <li>
-            <label for="nombre">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </li>
-            <li>
-            <label for="apellido">Last Name:</label>
-            <input type="text" id="Lname" name="Lname" required>
-        </li>
-            <li>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </li>
-            <li>
-            <label for="dateOfBith">Date of Bith:</label>
-            <input type="date" id="dateOfBith" name="dateOfBith" required>
-        </li>
-            <li>
-            <label for="country">Country of Residence:</label>
-            <input type="text" id="country" required>
-        </li>
-            <button type="submit" id="btnSend">Enviar</button>
-        </ol>
-        </form>
-        <div class="mode">
-        <button id="btnBasic">Basico</button>
-        <button id="btnHightContrast">Contraste</button>
-    </div>
+        <!-- No me parece optimo el formulario por lista, estas agregando un contenedor de mas y facilmente pueden ir solo o por su defecto div ya sea por estilo o agrupación. En caso que quieras agrupar deberias agruparlos dentro de un div. -->
+        <section class="form-container d-flex flex-column align-items-center mt-3">
+            <form class="row g-3 col-10 col-sm-6" id="form">
+                <div>
+                    <label for="nombre" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+    
+                <div>
+                    <label for="apellido" class="form-label">Last Name:</label>
+                    <input type="text" id="Lname" name="Lname" class="form-control" required>
+                </div>
+    
+                <div>
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+    
+                <div>
+                    <label for="dateOfBith" class="form-label">Date of Bith:</label>
+                    <input type="date" id="dateOfBith" name="dateOfBith" class="form-control" required>
+                </div>
+    
+                <div>
+                    <label for="country">Country of Residence:</label>
+                    <input type="text" id="country" class="form-control" required>    
+                </div>
+                <button type="submit" id="btnSend" class="btn btn-primary my-3">Enviar</button>
+      
+            </form>
+            <!--* Comento estos botones y creo un contenedor que contenga 2 botones en grupo, así aprovechamos estos estilos de Bootstrap -->
+            <!-- <div class="mode"> -->
+            <!-- <button id="btnBasic">Básico</button>
+            <button id="btnHightContrast">Contraste</button> -->
+            <!-- </div> -->
+            <div class="btn-group align-items-center" role="group" aria-label="Basic example">
+                <!-- Cambie el nombre en ingles, por que si tenemos los label y html en ingles deberíamos respetar la dinámica-->
+                <button type="button" class="btn btn-primary style-btn active">Basic</button>
+                <button type="button" class="btn btn-primary style-btn">High Contrast</button>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>Gonzalo Palomo Bootcamp CILSA 2024</p>
+    <!--* Agrego mi nombre :p -->
+    <footer class="mt-3 text-center">
+        <p>Gonzalo Palomo y Alex Rodriguez Bootcamp CILSA 2024</p>
     </footer>
+
+    <!-- Cambio de lugar los scripts aquí, porque fuera del body puede traer problemas a la carga del DOM y/o generar conflictos -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./JS/app.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="./JS/app.js"></script>
 </html>

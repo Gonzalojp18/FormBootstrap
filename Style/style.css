@@ -1,12 +1,14 @@
-html * {
+/** Desactivo para que se apliquen los diseños por defecto de bootstrap */
+/* PD: Igualmente con los estilos de bootstrap debería bastar */
+ /* html * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
+} */
+/*
 ul{
     li{
         list-style: none;
     }
 }
-
+ */
