@@ -1,73 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LINK  BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- LINK CSS -->
-    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Form</title>
 </head>
-
 <body id="body" class="text-bg-light">
-    <div class=container>
-        <header class="mt-3 p-2">
-            <h1 class="text-center">form using boostrap</h1>
-        </header>
-        <main>
-            <section class="form-container d-flex flex-column align-items-center mt-3 p-5 m-auto">
-                <form class="row g-3 col-10 col-sm-6" id="form">
-                    <section>
-                        <label for="name" class="form-label">Name:</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Example: Pepe"
-                            minlength="2" maxlength="50" pattern="[A-Za-z\s]+"
-                            title="Only letters and spaces are allowed" required>
-                    </section>
-                    <section>
-                        <label for="surname" class="form-label">Last Name:</label>
-                        <input type="text" id="surname" name="surname" class="form-control" placeholder="Example: Gomez"
-                            minlength="2" maxlength="50" pattern="[A-Za-z\s]+"
-                            title="Only letters and spaces are allowed" required>
-                    </section>
-                    <section>
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" id="email" name="email" class="form-control"
-                            placeholder="Example: pepegomez@gmail.com" required>
-                    </section>
-                    <section>
-                        <label for="dateOfBirth" class="form-label">Date of Birth:</label>
-                        <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required>
-                    </section>
-                    <section>
-                        <label for="country" class="form-label">Country of Residence:</label>
-                        <input type="text" id="country" class="form-control" placeholder="Example: Argentina"
-                            minlength="2" maxlength="50" pattern="[A-Za-z\s]+"
-                            title="Only letters and spaces are allowed" required>
-                    </section>
-                    <button type="submit" id="btnSend" class="btn btn-primary my-3">Send</button>
-                </form>
-                <!--* Comento estos botones y creo un contenedor que contenga 2 botones en grupo, así aprovechamos estos estilos de Bootstrap -->
-                <aside class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary style-btn active"
-                        aria-label="Switch to basic theme">Basic</button>
-                    <button type="button" class="btn btn-primary style-btn"
-                        aria-label="Switch to high contrast theme">High Contrast</button>
-                </aside>
-            </section>
-        </main>
-        <footer class="mt-3 text-center p-5">
-            <p>Gonzalo Palomo y Alex Rodriguez Bootcamp CILSA 2024</p>
-        </footer>
-    </div>
-
-    <!-- Cambio de lugar los scripts aquí, porque fuera del body puede traer problemas a la carga del DOM y/o generar conflictos -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <header class="mt-3">
+        <h1 class="text-center">form using boostrap</h1>
+    </header>
+    <main>
+        <section class="form-container d-flex flex-column align-items-center mt-3">
+            <form class="row g-3 col-10 col-sm-6 col-lg-4 p-3 my-2 rounded-4 text-bg-secondary" id="form">
+                <div>
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Pepe" minlength="2" maxlength="50" pattern="[A-Za-z\s]+" title="Only letters are allowed" required>
+                </div>
+                <div>
+                    <label for="surname" class="form-label">Last Name:</label>
+                    <input type="text" id="surname" name="surname" class="form-control" placeholder="Gomez" minlength="2" maxlength="50" pattern="[A-Za-z\s]+" title="Only letters are allowed" required>
+                </div>
+    
+                <div>
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="pepegomez@gmail.com" required>
+                </div>
+    
+                <div>
+                    <label for="dateOfBirth" class="form-label">Date of Birth:</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required>
+                </div>
+    
+                <div>
+                    <label for="country" class="form-label">Country of Residence:</label>
+                    <input type="text" id="country" class="form-control" placeholder="Argentina" minlength="2" maxlength="50" pattern="[A-Za-z\s]+" title="Only letters are allowed" required>    
+                </div>
+                <button type="submit" id="btnSend" class="btn btn-primary my-3">Send</button>
+            </form>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary style-btn active" aria-label="Switch to basic theme">Basic</button>
+                <button type="button" class="btn btn-primary style-btn" aria-label="Switch to high contrast theme">High Contrast</button>
+            </div>
+        </section>
+    </main>
+    <!--* Agrego mi nombre :p -->
+    <footer class="mt-3 text-center">
+        <p>Gonzalo Palomo y Alex Rodriguez Bootcamp CILSA 2024</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/app.js"></script>
 </body>
-
 </html>
